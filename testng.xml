@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	
+	<listeners>
+		<listener class-name="com.axisrooms.KnightsTemplar.listeners.ListenerClass"></listener>
+		<listener class-name="com.axisrooms.KnightsTemplar.listeners.MethodInterceptor"></listener>
+		<listener class-name="com.axisrooms.KnightsTemplar.listeners.AnnotationTransformer"></listener>
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      
+      <class name="com.axisrooms.KnightsTemplar.test.LoginPageTest"></class>
+      <class name="com.axisrooms.KnightsTemplar.test.TeamSummaryTest"></class>
+       <class name="com.axisrooms.KnightsTemplar.test.ChainSummaryTest"></class>
+       <class name="com.axisrooms.KnightsTemplar.pricing.CompetitionRuleTest"></class>
+        <class name="com.axisrooms.KnightsTemplar.pricing.PromotionRuleTest"></class>
+        <class name="com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest"></class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
