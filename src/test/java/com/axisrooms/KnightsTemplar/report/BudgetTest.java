@@ -4,13 +4,50 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 
-public class BudgetTest {
+import com.axisrooms.KnightsTemplar.basetest.BaseTest;
+import com.axisrooms.KnightsTemplar.header.HeaderPage;
+import com.axisrooms.KnightsTemplar.homePage.ChainSummaryPage;
+import com.axisrooms.KnightsTemplar.homePage.HomePage;
+import com.axisrooms.KnightsTemplar.loginPage.LoginPage;
+import com.axisrooms.KnightsTemplar.reports.BudgetPage;
+import com.axisrooms.KnightsTemplar.reports.ReportHeaderPage;
+import com.axisrooms.KnightsTemplar.utils.AssertionUtility;
+
+public class BudgetTest extends BaseTest {
 	
+	private BudgetTest() {
+		
+	}
+
 	@Test
-	public void budgetTest(Map<String,String>data) {
+	public void budgetTest(Map<String, String> getData) throws InterruptedException {
+
+		new LoginPage().getEmailTextField(getData.get("UserName")).getPasswordTextField(getData.get("Password"))
+				.getLoginButton();
+
+		new HomePage().getChainSummaryTab();
+
+		AssertionUtility.assertElementTextEquals(new HomePage().getNavigateToDashbordPageText,
+				"Click on any hotel to navigate to its Dashboard");
+
+		AssertionUtility.assertCurrentUrlEquals("https://rm.axisrooms.com/#/home");
+
+		new ChainSummaryPage().getSelectPropertyFromTable("AR Demo Hotel");
+
+		AssertionUtility.assertCurrentUrlEquals("https://rm.axisrooms.com/#/dashboard");
+		
+		new HeaderPage().getReportsTab();
+		
+		AssertionUtility.assertCurrentUrlContains("https://rm.axisrooms.com/#/report");
+		
+		new ReportHeaderPage().getSelectTabFromReportHeader("Budget");
+		
+		Thread.sleep(3000);
+		
+		new BudgetPage().viewForDropdown().getDownloadButton();
 		
 		
-		
+
 	}
 
 }

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 18 10:42:55 IST 2024</td>
+<td>Started on:</td><td>Tue Feb 27 15:12:07 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>53 seconds (53406 ms)</td>
+<tr><td>Total time:</td><td>64 seconds (64195 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,24 +76,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest.createOccupancyRule()'><b>createOccupancyRule</b><br>Test class: com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest<br>Parameters: {TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password=Password123#}</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //label[@class=&apos;btn btn-default occu-tab&apos;]&apos; (tried for 40 second(s) with 500 milliseconds interval)
+<td title='com.axisrooms.KnightsTemplar.report.BudgetTest.budgetTest()'><b>budgetTest</b><br>Test class: com.axisrooms.KnightsTemplar.report.BudgetTest<br>Parameters: {TestName=budgetTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password=Password123#}</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //select[@class=&apos;dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched&apos;]&apos; (tried for 40 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.elementToBeClickable(ExplicitWaitFactory.java:70)
-	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.click(ExplicitWaitFactory.java:19)
-	at com.axisrooms.KnightsTemplar.pricing.PricingRulePage.getOccupancyRuleButton(PricingRulePage.java:27)
-	at com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest.createOccupancyRule(OccupancyRuleTest.java:37)
+	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.elementToBeClickable(ExplicitWaitFactory.java:92)
+	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.click(ExplicitWaitFactory.java:20)
+	at com.axisrooms.KnightsTemplar.reports.BudgetPage.viewForDropdown(BudgetPage.java:26)
+	at com.axisrooms.KnightsTemplar.report.BudgetTest.budgetTest(BudgetTest.java:47)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[@class=&apos;btn btn-default occu-tab&apos;]&quot;}
-  (Session info: chrome=121.0.6167.185)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@class=&apos;dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched&apos;]&quot;}
+  (Session info: chrome=121.0.6167.189)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6525c17905f3ac30d32c75a3dd684126, findElement {using=xpath, value=//label[@class=&apos;btn btn-default occu-tab&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Sameer\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65083/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6525c17905f3ac30d32c75a3dd684126
+Command: [b041bce567fdfce26a4e13e7b35d6529, findElement {using=xpath, value=//select[@class=&apos;dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Sameer\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60331/devtoo..., se:cdpVersion: 121.0.6167.189, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b041bce567fdfce26a4e13e7b35d6529
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -115,14 +115,14 @@ Session ID: 6525c17905f3ac30d32c75a3dd684126
 	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
 	... 32 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1451516720", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1451516720'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //label[@class=&apos;btn btn-default occu-tab&apos;]&apos; (tried for 40 second(s) with 500 milliseconds interval)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2053668237", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2053668237'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //select[@class=&apos;dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched&apos;]&apos; (tried for 40 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.elementToBeClickable(ExplicitWaitFactory.java:70)
-	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.click(ExplicitWaitFactory.java:19)
-	at com.axisrooms.KnightsTemplar.pricing.PricingRulePage.getOccupancyRuleButton(PricingRulePage.java:27)
-	at com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest.createOccupancyRule(OccupancyRuleTest.java:37)
+	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.elementToBeClickable(ExplicitWaitFactory.java:92)
+	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.click(ExplicitWaitFactory.java:20)
+	at com.axisrooms.KnightsTemplar.reports.BudgetPage.viewForDropdown(BudgetPage.java:26)
+	at com.axisrooms.KnightsTemplar.report.BudgetTest.budgetTest(BudgetTest.java:47)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,15 +151,15 @@ Session ID: 6525c17905f3ac30d32c75a3dd684126
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[@class=&apos;btn btn-default occu-tab&apos;]&quot;}
-  (Session info: chrome=121.0.6167.185)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@class=&apos;dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched&apos;]&quot;}
+  (Session info: chrome=121.0.6167.189)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6525c17905f3ac30d32c75a3dd684126, findElement {using=xpath, value=//label[@class=&apos;btn btn-default occu-tab&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Sameer\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65083/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6525c17905f3ac30d32c75a3dd684126
+Command: [b041bce567fdfce26a4e13e7b35d6529, findElement {using=xpath, value=//select[@class=&apos;dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Sameer\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60331/devtoo..., se:cdpVersion: 121.0.6167.189, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b041bce567fdfce26a4e13e7b35d6529
 	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -186,8 +186,8 @@ Session ID: 6525c17905f3ac30d32c75a3dd684126
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
 	... 32 more
 </pre></div></td>
-<td>47</td>
-<td>com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest@740cae06</td></tr>
+<td>50</td>
+<td>com.axisrooms.KnightsTemplar.report.BudgetTest@644baf4a</td></tr>
 </table><p>
 </body>
 </html>

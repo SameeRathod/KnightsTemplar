@@ -2,42 +2,42 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-18T10:42:55 IST" name="Suite" finished-at="2024-02-18T10:43:48 IST" duration-ms="53406">
+  <suite started-at="2024-02-27T15:12:07 IST" name="Suite" finished-at="2024-02-27T15:13:11 IST" duration-ms="64195">
     <groups>
     </groups>
-    <test started-at="2024-02-18T10:42:55 IST" name="Test" finished-at="2024-02-18T10:43:48 IST" duration-ms="53406">
-      <class name="com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest@740cae06]" started-at="2024-02-18T10:42:55 IST" name="setUp" finished-at="2024-02-18T10:43:01 IST" duration-ms="5631" status="PASS">
+    <test started-at="2024-02-27T15:12:07 IST" name="Test" finished-at="2024-02-27T15:13:11 IST" duration-ms="64195">
+      <class name="com.axisrooms.KnightsTemplar.report.BudgetTest">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.axisrooms.KnightsTemplar.report.BudgetTest@644baf4a]" started-at="2024-02-27T15:12:08 IST" name="setUp" finished-at="2024-02-27T15:12:21 IST" duration-ms="12890" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6a1568d6]]>
+                <![CDATA[[Ljava.lang.Object;@66f5b8fe]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="createOccupancyRule(java.util.Map)[pri:0, instance:com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest@740cae06]" started-at="2024-02-18T10:43:01 IST" name="createOccupancyRule" data-provider="getData" finished-at="2024-02-18T10:43:48 IST" duration-ms="47152" status="FAIL">
+        <test-method signature="budgetTest(java.util.Map)[pri:0, instance:com.axisrooms.KnightsTemplar.report.BudgetTest@644baf4a]" started-at="2024-02-27T15:12:21 IST" name="budgetTest" data-provider="getData" finished-at="2024-02-27T15:13:11 IST" duration-ms="50551" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password=Password123#}]]>
+                <![CDATA[{TestName=budgetTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password=Password123#}]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //label[@class='btn btn-default occu-tab']' (tried for 40 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //select[@class='dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched']' (tried for 40 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //label[@class='btn btn-default occu-tab']' (tried for 40 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //select[@class='dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched']' (tried for 40 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.elementToBeClickable(ExplicitWaitFactory.java:70)
-at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.click(ExplicitWaitFactory.java:19)
-at com.axisrooms.KnightsTemplar.pricing.PricingRulePage.getOccupancyRuleButton(PricingRulePage.java:27)
-at com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest.createOccupancyRule(OccupancyRuleTest.java:37)
+at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.elementToBeClickable(ExplicitWaitFactory.java:92)
+at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.click(ExplicitWaitFactory.java:20)
+at com.axisrooms.KnightsTemplar.reports.BudgetPage.viewForDropdown(BudgetPage.java:26)
+at com.axisrooms.KnightsTemplar.report.BudgetTest.budgetTest(BudgetTest.java:47)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,15 +66,15 @@ at org.testng.TestNG.run(TestNG.java:1067)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[@class='btn btn-default occu-tab']"}
-  (Session info: chrome=121.0.6167.185)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@class='dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched']"}
+  (Session info: chrome=121.0.6167.189)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6525c17905f3ac30d32c75a3dd684126, findElement {using=xpath, value=//label[@class='btn btn-default occu-tab']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Sameer\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65083/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6525c17905f3ac30d32c75a3dd684126
+Command: [b041bce567fdfce26a4e13e7b35d6529, findElement {using=xpath, value=//select[@class='dropdown-toggle btn-large form-control ng-pristine ng-valid ng-not-empty ng-touched']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Sameer\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60331/devtoo..., se:cdpVersion: 121.0.6167.189, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b041bce567fdfce26a4e13e7b35d6529
 at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -105,12 +105,12 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOccupancyRule -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest@740cae06]" started-at="2024-02-18T10:43:48 IST" name="tearDown" finished-at="2024-02-18T10:43:48 IST" duration-ms="141" status="PASS">
+        </test-method> <!-- budgetTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.axisrooms.KnightsTemplar.report.BudgetTest@644baf4a]" started-at="2024-02-27T15:13:11 IST" name="tearDown" finished-at="2024-02-27T15:13:11 IST" duration-ms="198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest -->
+      </class> <!-- com.axisrooms.KnightsTemplar.report.BudgetTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
