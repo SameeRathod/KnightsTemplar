@@ -17,6 +17,8 @@
         <class name="com.axisrooms.KnightsTemplar.pricing.PromotionRuleTest"></class>
         <class name="com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest"></class>
         <class name="com.axisrooms.KnightsTemplar.report.BudgetTest"></class>
+        <class name="com.axisrooms.KnightsTemplar.report.PaceTest"></class>
+        <class name="com.axisrooms.KnightsTemplar.report.OptimizerTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

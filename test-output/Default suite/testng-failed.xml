@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.axisrooms.KnightsTemplar.report.BudgetTest">
+      <class name="com.axisrooms.KnightsTemplar.report.OptimizerTest">
         <methods>
-          <include name="budgetTest"/>
+          <include name="optimizerTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.axisrooms.KnightsTemplar.report.BudgetTest -->
+      </class> <!-- com.axisrooms.KnightsTemplar.report.OptimizerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

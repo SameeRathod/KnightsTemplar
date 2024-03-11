@@ -1,10 +1,13 @@
 package com.axisrooms.KnightsTemplar.reports;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.axisrooms.KnightsTemplar.driver.DriverManager;
+import com.axisrooms.KnightsTemplar.enums.WaitStrategy;
+import com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory;
 
 public class SalesPage {
 	
@@ -17,7 +20,7 @@ public class SalesPage {
 	@FindBy(xpath = "//button[@class='btn btn-default btn-sm pull-left uib-left']")
 	private WebElement priviousYearArrow;
 	
-	@FindBy(xpath = "//span[@class='ng-binding'][normalize-space()='May']")
+	@FindBy(xpath = "//span")
 	private WebElement selectMonthFromTable; //dynamic
 	
 	@FindBy(xpath = "//input[contains(@class,'form-control flat-cal-date-picker date ng-valid ng-isolate-scope ng-not-empty ng-valid-date ng-dirty ng-touched')]")
@@ -35,15 +38,16 @@ public class SalesPage {
 	@FindBy(xpath = "//button[contains(@ng-click,'downloadSales()')]")
 	private WebElement downloadButton;
 	
-	@FindBy (xpath = "//div[@class='rm-data-group-title large col-md-5 calculation']/md-radio-group/md-radio-button/div[2][normalize-space()='Hotel Level']")
+	@FindBy (xpath = "//div")
 	private WebElement selectRatePlaceBreakupBasedOn;//dynamic
 	
 	public SalesPage() {
 		PageFactory.initElements(DriverManager.getDriver(), this);
 	}
 
-	public WebElement getFromMonthTextField() {
-		return fromMonthTextField;
+	public SalesPage getFromMonthTextField() {
+		ExplicitWaitFactory.click(fromMonthTextField, WaitStrategy.CLICKABLE, " user clicked on the from month field");
+		return this;
 	}
 
 	public WebElement getNextYearArrow() {
@@ -54,32 +58,47 @@ public class SalesPage {
 		return priviousYearArrow;
 	}
 
-	public WebElement getSelectMonthFromTable() {
-		return selectMonthFromTable;
+	public SalesPage getSelectMonthFromTable(String selectMonth) {
+		String format = String.format("//span[@class='ng-binding'][normalize-space()='%s']", selectMonth);
+		WebElement element = selectMonthFromTable.findElement(By.xpath(format));
+		ExplicitWaitFactory.click(element, WaitStrategy.CLICKABLE, " user select month as "+selectMonth);
+		return this;
 	}
 
-	public WebElement getToMonthTextField() {
-		return toMonthTextField;
+	public SalesPage getToMonthTextField() {
+		ExplicitWaitFactory.click(toMonthTextField, WaitStrategy.CLICKABLE, " user clicked on the to month field");
+
+		return this;
 	}
 
-	public WebElement getSelectStatus() {
-		return selectStatus;
+	public SalesPage getSelectStatus(String enterStatus) {
+		ExplicitWaitFactory.selectValueByVisibleText(selectStatus, WaitStrategy.VISIBLE, enterStatus, " user select Staus as "+enterStatus);
+		return this;
 	}
 
-	public WebElement getSubmitButton() {
-		return submitButton;
+	public SalesPage getSubmitButton() {
+		ExplicitWaitFactory.click(submitButton, WaitStrategy.CLICKABLE, " user clicked on submit button");
+
+		return this;
 	}
 
-	public WebElement getLastYearToggleKey() {
-		return lastYearToggleKey;
+	public SalesPage getLastYearToggleKey() {
+		ExplicitWaitFactory.click(lastYearToggleKey, WaitStrategy.CLICKABLE, " user clicked on lastYearToggleKey ");
+
+		return this;
 	}
 
-	public WebElement getDownloadButton() {
-		return downloadButton;
+	public SalesPage getDownloadButton() {
+		ExplicitWaitFactory.click(downloadButton, WaitStrategy.CLICKABLE, " user clicked on downloadButton ");
+
+		return this;
 	}
 
-	public WebElement getSelectRatePlaceBreakupBasedOn() {
-		return selectRatePlaceBreakupBasedOn;
+	public SalesPage getSelectRatePlaceBreakupBasedOn(String ratePlan) {
+		String format = String.format("//div[@class='rm-data-group-title large col-md-5 calculation']/md-radio-group/md-radio-button/div[2][normalize-space()='%s']", ratePlan);
+		WebElement element = selectMonthFromTable.findElement(By.xpath(format));
+		ExplicitWaitFactory.click(element, WaitStrategy.CLICKABLE, " user select rate plan based on as  "+ratePlan);
+		return this;
 	}
 	
 	

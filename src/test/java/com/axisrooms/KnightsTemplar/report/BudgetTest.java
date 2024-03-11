@@ -44,7 +44,8 @@ public class BudgetTest extends BaseTest {
 		
 		Thread.sleep(3000);
 		
-		new BudgetPage().viewForDropdown().getDownloadButton();
+		new BudgetPage().viewForDropdown("Next Year").getDownloadButton();
+		Thread.sleep(3000);
 		
 		
 
