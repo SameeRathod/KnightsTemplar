@@ -63,7 +63,8 @@ public class ExplicitWaitFactory {
 		}
 	}
 
-	public static void selectValueByVisibleText(WebElement element,WaitStrategy waitstrategy,String selectVisibleText,String ele) {
+	public static void selectValueByVisibleText(WebElement element, WaitStrategy waitstrategy, String selectVisibleText,
+			String ele) {
 		if (waitstrategy == (WaitStrategy.PRESENCE)) {
 			elementVisibiity(element);
 		}
@@ -98,10 +99,8 @@ public class ExplicitWaitFactory {
 
 	private static void elementVisibleByText(WebElement element) {
 
-	 new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(40))
+		new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(40))
 				.until(ExpectedConditions.visibilityOf(element));
-
-		
 
 	}
 

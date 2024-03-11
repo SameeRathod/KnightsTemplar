@@ -1,116 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-18T10:42:55 IST" name="Suite" finished-at="2024-02-18T10:43:48 IST" duration-ms="53406">
+  <suite started-at="2024-03-06T15:32:01 IST" name="Suite" finished-at="2024-03-06T15:32:28 IST" duration-ms="26897">
     <groups>
     </groups>
-    <test started-at="2024-02-18T10:42:55 IST" name="Test" finished-at="2024-02-18T10:43:48 IST" duration-ms="53406">
-      <class name="com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest@740cae06]" started-at="2024-02-18T10:42:55 IST" name="setUp" finished-at="2024-02-18T10:43:01 IST" duration-ms="5631" status="PASS">
+    <test started-at="2024-03-06T15:32:01 IST" name="Test" finished-at="2024-03-06T15:32:28 IST" duration-ms="26897">
+      <class name="com.axisrooms.KnightsTemplar.report.OptimizerTest">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.axisrooms.KnightsTemplar.report.OptimizerTest@11392934]" started-at="2024-03-06T15:32:01 IST" name="setUp" finished-at="2024-03-06T15:32:08 IST" duration-ms="6929" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6a1568d6]]>
+                <![CDATA[[Ljava.lang.Object;@1b24ea2a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="createOccupancyRule(java.util.Map)[pri:0, instance:com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest@740cae06]" started-at="2024-02-18T10:43:01 IST" name="createOccupancyRule" data-provider="getData" finished-at="2024-02-18T10:43:48 IST" duration-ms="47152" status="FAIL">
+        <test-method signature="optimizerTest(java.util.Map)[pri:0, instance:com.axisrooms.KnightsTemplar.report.OptimizerTest@11392934]" started-at="2024-03-06T15:32:08 IST" name="optimizerTest" data-provider="getData" finished-at="2024-03-06T15:32:28 IST" duration-ms="19270" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password=Password123#}]]>
+                <![CDATA[{TestName=optimizerTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password=Password123#}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //label[@class='btn btn-default occu-tab']' (tried for 40 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //label[@class='btn btn-default occu-tab']' (tried for 40 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.elementToBeClickable(ExplicitWaitFactory.java:70)
-at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.click(ExplicitWaitFactory.java:19)
-at com.axisrooms.KnightsTemplar.pricing.PricingRulePage.getOccupancyRuleButton(PricingRulePage.java:27)
-at com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest.createOccupancyRule(OccupancyRuleTest.java:37)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[@class='btn btn-default occu-tab']"}
-  (Session info: chrome=121.0.6167.185)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6525c17905f3ac30d32c75a3dd684126, findElement {using=xpath, value=//label[@class='btn btn-default occu-tab']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Sameer\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65083/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6525c17905f3ac30d32c75a3dd684126
-at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
-... 32 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOccupancyRule -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest@740cae06]" started-at="2024-02-18T10:43:48 IST" name="tearDown" finished-at="2024-02-18T10:43:48 IST" duration-ms="141" status="PASS">
+        </test-method> <!-- optimizerTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.axisrooms.KnightsTemplar.report.OptimizerTest@11392934]" started-at="2024-03-06T15:32:28 IST" name="tearDown" finished-at="2024-03-06T15:32:28 IST" duration-ms="155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest -->
+      </class> <!-- com.axisrooms.KnightsTemplar.report.OptimizerTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

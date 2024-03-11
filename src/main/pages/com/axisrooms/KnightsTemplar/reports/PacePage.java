@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.axisrooms.KnightsTemplar.driver.DriverManager;
+import com.axisrooms.KnightsTemplar.enums.WaitStrategy;
+import com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory;
 
 public class PacePage {
 	
@@ -20,5 +22,23 @@ public class PacePage {
 	public PacePage() {
 		PageFactory.initElements(DriverManager.getDriver(), this);
 	}
+
+	public PacePage getSelectNoOfDaysForReservationWindow(String visibleValue) {
+		ExplicitWaitFactory.selectValueByVisibleText(selectNoOfDaysForReservationWindow, WaitStrategy.VISIBLE, visibleValue, "user select vale from reservation window is "+visibleValue);
+		return this;
+	}
+
+	public PacePage getLastYearToggleKey() {
+		ExplicitWaitFactory.click(lastYearToggleKey, WaitStrategy.CLICKABLE, " user clicked on last year toggle key");
+		return this;
+	}
+
+	public PacePage getDownloadButton() {
+		ExplicitWaitFactory.click(downloadButton, WaitStrategy.CLICKABLE, " user clicked on downloadButton");
+
+		return this;
+	}
+	
+	
 
 }

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest" class="method navigator-link" hash-for-method="createOccupancyRule({TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Pa...)">createOccupancyRule({TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Pa...)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.axisrooms.KnightsTemplar.report.OptimizerTest" class="method navigator-link" hash-for-method="optimizerTest({TestName=optimizerTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password...)">optimizerTest({TestName=optimizerTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,62 +118,22 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.axisrooms.KnightsTemplar.report.OptimizerTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createOccupancyRule({TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Pa...)">
-                  </a> <!-- createOccupancyRule({TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Pa...) -->
-                  <span class="method-name">createOccupancyRule</span>
-                  <span class="parameters">({TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password=Password123#})</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //label[@class=&apos;btn btn-default occu-tab&apos;]&apos; (tried for 40 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.elementToBeClickable(ExplicitWaitFactory.java:70)
-	at com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory.click(ExplicitWaitFactory.java:19)
-	at com.axisrooms.KnightsTemplar.pricing.PricingRulePage.getOccupancyRuleButton(PricingRulePage.java:27)
-	at com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest.createOccupancyRule(OccupancyRuleTest.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[@class=&apos;btn btn-default occu-tab&apos;]&quot;}
-  (Session info: chrome=121.0.6167.185)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6525c17905f3ac30d32c75a3dd684126, findElement {using=xpath, value=//label[@class=&apos;btn btn-default occu-tab&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Sameer\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65083/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6525c17905f3ac30d32c75a3dd684126
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
-	... 32 more
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
+                  <a name="optimizerTest({TestName=optimizerTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password...)">
+                  </a> <!-- optimizerTest({TestName=optimizerTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password...) -->
+                  <span class="method-name">optimizerTest</span>
+                  <span class="parameters">({TestName=optimizerTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password=Password123#})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -197,6 +157,9 @@ Session ID: 6525c17905f3ac30d32c75a3dd684126
       &lt;class name=&quot;com.axisrooms.KnightsTemplar.pricing.CompetitionRuleTest&quot;/&gt;
       &lt;class name=&quot;com.axisrooms.KnightsTemplar.pricing.PromotionRuleTest&quot;/&gt;
       &lt;class name=&quot;com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest&quot;/&gt;
+      &lt;class name=&quot;com.axisrooms.KnightsTemplar.report.BudgetTest&quot;/&gt;
+      &lt;class name=&quot;com.axisrooms.KnightsTemplar.report.PaceTest&quot;/&gt;
+      &lt;class name=&quot;com.axisrooms.KnightsTemplar.report.OptimizerTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -210,7 +173,7 @@ Session ID: 6525c17905f3ac30d32c75a3dd684126
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (6 classes)</span>
+                <span class="test-name">Test (9 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -238,14 +201,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createOccupancyRule')
-data.setCell(0, 2, 'com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest')
-data.setCell(0, 3, 47152);
+data.setCell(0, 1, 'optimizerTest')
+data.setCell(0, 2, 'com.axisrooms.KnightsTemplar.report.OptimizerTest')
+data.setCell(0, 3, 19270);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 47 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -271,20 +234,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.axisrooms.KnightsTemplar.pricing.OccupancyRuleTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.axisrooms.KnightsTemplar.report.OptimizerTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp([{TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, P...)</span>
+                <span class="method-name">setUp([{TestName=optimizerTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Passwor...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">createOccupancyRule({TestName=createOccupancyRule, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Pa...)</span>
-                <span class="method-start">5631 ms</span>
+                <span class="method-name">optimizerTest({TestName=optimizerTest, UserName=raghavendra.m@axisrooms.com, Execute=yes, Browser=chrome, Password...)</span>
+                <span class="method-start">6930 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">52790 ms</span>
+                <span class="method-start">26207 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
