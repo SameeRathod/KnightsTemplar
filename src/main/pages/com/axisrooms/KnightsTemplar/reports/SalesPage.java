@@ -11,7 +11,7 @@ import com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory;
 
 public class SalesPage {
 	
-	@FindBy(xpath = "//input[@class='form-control flat-cal-date-picker date ng-valid ng-isolate-scope ng-not-empty ng-valid-date ng-touched ng-dirty']")
+	@FindBy(xpath = "//span[normalize-space()='From']/../input")
 	private WebElement fromMonthTextField;
 	
 	@FindBy(xpath = "//button[@class='btn btn-default btn-sm pull-right uib-right']")
@@ -20,11 +20,15 @@ public class SalesPage {
 	@FindBy(xpath = "//button[@class='btn btn-default btn-sm pull-left uib-left']")
 	private WebElement priviousYearArrow;
 	
-	@FindBy(xpath = "//span")
+	@FindBy(xpath = "//ul")
 	private WebElement selectMonthFromTable; //dynamic
 	
-	@FindBy(xpath = "//input[contains(@class,'form-control flat-cal-date-picker date ng-valid ng-isolate-scope ng-not-empty ng-valid-date ng-dirty ng-touched')]")
+	
+	@FindBy(xpath = "//span[normalize-space()='To']/../input")
 	private WebElement toMonthTextField;
+	
+	@FindBy(xpath = "//ul")
+	private WebElement selectMonthTOTable; //dynamic
 	
 	@FindBy(xpath = "//select[@class='btn dropdown-toggle btn-large form-control btn-head ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched']")
 	private WebElement selectStatus;
@@ -58,16 +62,26 @@ public class SalesPage {
 		return priviousYearArrow;
 	}
 
-	public SalesPage getSelectMonthFromTable(String selectMonth) {
-		String format = String.format("//span[@class='ng-binding'][normalize-space()='%s']", selectMonth);
+	public SalesPage getSelectMonthFromTable(String selectMonth) throws InterruptedException {
+		String format = String.format("//ul[@role='button']/li/div/table/tbody/tr/td[normalize-space()='%s']", selectMonth);
 		WebElement element = selectMonthFromTable.findElement(By.xpath(format));
+		ExplicitWaitFactory.click(element, WaitStrategy.CLICKABLE, " user select month as "+selectMonth);
+		Thread.sleep(3000);
+		return this;
+	}
+	public SalesPage getSelectMonthToTable(String selectMonth) throws InterruptedException {
+		Thread.sleep(3000);
+		String format = String.format("//ul[@role='button']/li/div/table/tbody/tr/td[normalize-space()='%s']", selectMonth);
+		WebElement element = selectMonthTOTable.findElement(By.xpath(format));
 		ExplicitWaitFactory.click(element, WaitStrategy.CLICKABLE, " user select month as "+selectMonth);
 		return this;
 	}
 
-	public SalesPage getToMonthTextField() {
-		ExplicitWaitFactory.click(toMonthTextField, WaitStrategy.CLICKABLE, " user clicked on the to month field");
 
+	public SalesPage getToMonthTextField() throws InterruptedException {
+		Thread.sleep(3000);
+		ExplicitWaitFactory.click(toMonthTextField, WaitStrategy.CLICKABLE, " user clicked on the to month field");
+		Thread.sleep(3000);
 		return this;
 	}
 

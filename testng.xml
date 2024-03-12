@@ -19,6 +19,8 @@
         <class name="com.axisrooms.KnightsTemplar.report.BudgetTest"></class>
         <class name="com.axisrooms.KnightsTemplar.report.PaceTest"></class>
         <class name="com.axisrooms.KnightsTemplar.report.OptimizerTest"></class>
+        <class name="com.axisrooms.KnightsTemplar.report.SalesTest"></class>
+        <class name="com.axisrooms.KnightsTemplar.report.PriceUpdateTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
