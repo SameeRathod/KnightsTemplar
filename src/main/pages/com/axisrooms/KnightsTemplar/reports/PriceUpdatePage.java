@@ -1,5 +1,6 @@
 package com.axisrooms.KnightsTemplar.reports;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,7 +11,7 @@ import com.axisrooms.KnightsTemplar.factories.ExplicitWaitFactory;
 
 public class PriceUpdatePage {
 	
-	@FindBy(xpath = "//input[@class='form-control dp ng-isolate-scope ng-valid-date ng-touched ng-not-empty ng-dirty ng-valid ng-valid-required']")
+	@FindBy(xpath = "//div[@class='form-group']//div//input[@name='startDate']")
 	private WebElement startDateTextField;
 	
 	@FindBy(xpath = "//button[@class='btn btn-default btn-sm pull-right uib-right']")
@@ -19,14 +20,14 @@ public class PriceUpdatePage {
 	@FindBy(xpath = "//button[@class='btn btn-default btn-sm pull-left uib-left']")
 	private WebElement priviousArrowButton;
 	
-	@FindBy(xpath = "//span[normalize-space()='08']")
+	@FindBy(xpath = "//span")
 	private WebElement selectDateFromTable;//dynamic
 	
 	@FindBy(xpath = "//input[contains(@class,'form-control dp ng-isolate-scope ng-valid-date ng-not-empty ng-dirty ng-valid ng-valid-required ng-touched')]")
 	private WebElement endDateTextField;
 	
-	@FindBy(xpath = "//select[@name='type']")
-	private WebElement typrDropdown;
+	@FindBy(xpath = "//body/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[3]/form[1]/div[1]/div[3]/div[1]/div[1]/select[1]")
+	private WebElement typeDropdown;
 	
 	@FindBy(xpath = "//select[@name='room']")
 	private WebElement roomDropdown;
@@ -47,11 +48,11 @@ public class PriceUpdatePage {
 		PageFactory.initElements(DriverManager.getDriver(), this);
 	}
 
-	public WebElement getStartDateTextField() {
+	public PriceUpdatePage getStartDateTextField() {
 		ExplicitWaitFactory.click(startDateTextField, WaitStrategy.CLICKABLE, " user clciked on the start date text field");
 		
 		
-		return startDateTextField;
+		return this;
 	}
 
 	public WebElement getNextArrowButton() {
@@ -62,8 +63,12 @@ public class PriceUpdatePage {
 		return priviousArrowButton;
 	}
 
-	public WebElement getSelectDateFromTable() {
-		return selectDateFromTable;
+	public PriceUpdatePage getSelectDateFromTable(String selectDate) throws InterruptedException {
+		String format = String.format("//span[normalize-space()='%s']", selectDate);
+		WebElement element = selectDateFromTable.findElement(By.xpath(format));
+		ExplicitWaitFactory.click(element, WaitStrategy.CLICKABLE, " user selected date as "+selectDate);
+		Thread.sleep(3000);
+		return this;
 	}
 
 	public PriceUpdatePage getEndDateTextField() {
@@ -72,8 +77,8 @@ public class PriceUpdatePage {
 		return this;
 	}
 
-	public PriceUpdatePage getTyprDropdown(String selectByTypeText) {
-		ExplicitWaitFactory.selectValueByVisibleText(typrDropdown, WaitStrategy.VISIBLE, selectByTypeText, " user select type value as "+selectByTypeText);
+	public PriceUpdatePage getTyprDropdown() {
+		ExplicitWaitFactory.click(typeDropdown, WaitStrategy.CLICKABLE, " user clciked on the type dropdown");
 		return this;
 	}
 
@@ -82,9 +87,9 @@ public class PriceUpdatePage {
 		return this;
 	}
 
-	public WebElement getSubmitButton() {
+	public PriceUpdatePage getSubmitButton() {
 		ExplicitWaitFactory.click(submitButton, WaitStrategy.CLICKABLE, " user clicked on the submit button");
-		return submitButton;
+		return this;
 	}
 
 	public PriceUpdatePage getDownloadButton() {
